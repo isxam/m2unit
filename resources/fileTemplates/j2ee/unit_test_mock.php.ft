@@ -1,0 +1,3 @@
+${DS}this->${ARG_NAME}Mock = ${DS}this->getMockBuilder('${CLASSNAME}')
+    ->disableOriginalConstructor()
+    ->getMock();

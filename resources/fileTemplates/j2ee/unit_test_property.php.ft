@@ -1,0 +1,5 @@
+/**
+* @var ${CLASSNAME}|\PHPUnit_Framework_MockObject_MockObject
+*/
+private ${DS}${ARG_NAME}Mock;
+

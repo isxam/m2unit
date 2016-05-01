@@ -1,0 +1,30 @@
+<idea-plugin version="2">
+  <id>com.isxam.m2unit</id>
+  <name>M2 Unit Test Generator</name>
+  <version>0.1</version>
+  <vendor email="maxim.stsepantsevich@gmail.com" url="http://www.stmax.name">Max Stsepantsevich</vendor>
+
+  <description><![CDATA[Unit test generator for Magento2]]></description>
+
+  <change-notes><![CDATA[]]></change-notes>
+
+  <idea-version since-build="141.0"/>
+
+  <depends>com.intellij.modules.lang</depends>
+  <depends>com.jetbrains.php</depends>
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <fileTemplateGroup implementation="com.isxam.m2unit.fileTemplates.TemplateFactory"/>
+  </extensions>
+
+  <actions>
+    <action id="m2unit.generateClassUnit" class="com.isxam.m2unit.action.GenerateClassUnitAction"
+            text="M2 Unit Test"
+            description="Generate unit test for class">
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt U"/>
+    </action>
+  </actions>
+
+</idea-plugin>

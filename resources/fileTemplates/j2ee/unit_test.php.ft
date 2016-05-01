@@ -1,0 +1,34 @@
+<?php
+#parse("PHP File Header")
+
+namespace ${NAMESPACE};
+
+use Magento\Framework\TestFramework\Unit\Helper\ObjectManager as ObjectManagerHelper;
+
+class ${CLASSNAME} extends \PHPUnit_Framework_TestCase
+{
+    /**
+     * @var ObjectManagerHelper
+     */
+    private $objectManagerHelper;
+
+    /**
+    * @var ${ORIGINAL_CLASSNAME}|\PHPUnit_Framework_MockObject_MockObject
+    */
+    private ${DS}${ORIGINAL_PROPERTY_NAME};
+
+    ${PROPERTIES}
+
+    public function setUp()
+    {
+        ${TEST_SETUP}
+
+        ${DS}this->objectManagerHelper = new ObjectManagerHelper(${DS}this);
+        ${DS}this->${ORIGINAL_PROPERTY_NAME} = ${DS}this->objectManagerHelper->getObject(
+            '${ORIGINAL_CLASSNAME}',
+            [
+                ${ORIGINAL_OBJ_ARGUMENTS}
+            ]
+        );
+    }
+}
